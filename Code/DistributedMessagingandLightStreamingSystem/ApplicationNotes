@@ -1,0 +1,12 @@
+To run the Streaming application, the dependencies in the pom.xml file must be added first.
+
+Kafka should then be run using the specified versions.
+
+4 different topics are created on Kafka. Color, illness, odortaste, and unusualstate.
+
+1- Run batch file, save model with any ml aggregation.
+2- Add the interface files required for streaming.
+3- Before running the realtime file, determine the path to send the test data to Apache Kafka.
+4- Run Kafka.
+5- Run Realtime.scala, send the appropriate test data to the test folder you specified.
+6- Spark directs the information to the name of the relevant topic according to the result obtained from the "prediction" column.
