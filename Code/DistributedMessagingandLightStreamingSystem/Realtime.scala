@@ -38,6 +38,7 @@ object Realtime {
         StructField("Subjectivity", DoubleType),
         StructField("Polarity", DoubleType),
         StructField("Analysis", StringType),
+	StructField("Coordinates", StringType),
         StructField("label", DoubleType)
       ))
 
@@ -79,6 +80,7 @@ object Realtime {
       val colorDF2 = colorDF.withColumn("value",
         F.concat(
           F.col("text"),F.lit(","),
+	  F.col("Coordinates"),F.lit(","),
           F.col("label"),F.lit(","),
           F.col("prediction")
         ))
@@ -93,6 +95,7 @@ object Realtime {
       val illnessDF2 = illnessDF.withColumn("value",
         F.concat(
           F.col("text"),F.lit(","),
+	  F.col("Coordinates"),F.lit(","),
           F.col("label"),F.lit(","),
           F.col("prediction")
         ))
@@ -107,6 +110,7 @@ object Realtime {
       val odortasteDF2 = odortasteDF.withColumn("value",
         F.concat(
           F.col("text"),F.lit(","),
+	  F.col("Coordinates"),F.lit(","),
           F.col("label"),F.lit(","),
           F.col("prediction")
         ))
@@ -121,6 +125,7 @@ object Realtime {
       val usDF2 = usDF.withColumn("value",
         F.concat(
           F.col("text"),F.lit(","),
+	  F.col("Coordinates"),F.lit(","),
           F.col("label"),F.lit(","),
           F.col("prediction")
         ))

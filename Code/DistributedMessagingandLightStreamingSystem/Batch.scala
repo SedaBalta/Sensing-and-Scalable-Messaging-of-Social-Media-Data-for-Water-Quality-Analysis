@@ -32,6 +32,7 @@ object Batch {
         StructField("Subjectivity", DoubleType),
         StructField("Polarity", DoubleType),
         StructField("Analysis", StringType),
+	StructField("Coordinates", StringType),
         StructField("label", DoubleType)
       ))
 
